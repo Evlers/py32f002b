@@ -1,0 +1,42 @@
+{
+    "configurations": [
+        {
+            "name": "keil",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/libraries/cmsis/Include",
+                "${workspaceFolder}/libraries/cmsis/Device/PY32F0xx/Include",
+                "${workspaceFolder}/libraries/hal_driver/inc",
+                "${workspaceFolder}/app",
+                "${workspaceFolder}/board",
+                "${workspaceFolder}/board/config",
+                "${workspaceFolder}/drivers",
+                "${workspaceFolder}/components/log",
+                "${workspaceFolder}/components/ringbuffer",
+                "${workspaceFolder}/components/utils"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "__GNUC__",
+                "USE_HAL_DRIVER",
+                "PY32F002Bx5"
+            ],
+            "compilerPath": "C:/tools/env-windows-v1.3.5/tools/gnu_gcc/arm_gcc/mingw/arm-none-eabi/include",
+            "cStandard": "c17",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "clang-x64"
+        },
+        {
+            "name": "cmake",
+            "compileCommands": "build/compile_commands.json",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

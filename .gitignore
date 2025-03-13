@@ -1,0 +1,44 @@
+*.pyc
+*.map
+*.dblite
+*.elf
+*.bin
+*.hex
+*.axf
+#*.exe
+*.pdb
+*.idb
+*.ilk
+*.old
+*.crf
+build
+*~
+*.o
+*.obj
+*.bak
+*.dep
+*.lib
+#*.a
+*.i
+*.d
+*.dfinish
+*.su
+*.scvd
+.cache/
+!board/flash/*.elf
+
+# .vscode
+.vscode/settings.json
+
+# Tools
+!tools/*/*.exe
+
+# mdk
+*.uvguix*
+*.uvoptx
+JLinkLog.txt
+JlinkSettings.ini
+projects/RTE
+projects/Objects
+projects/Listings
+projects/DebugConfig

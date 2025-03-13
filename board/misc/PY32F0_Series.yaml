@@ -1,0 +1,1303 @@
+name: PY32F0 Series
+generated_from_pack: true
+pack_file_release: 1.2.0
+variants:
+- name: PY32F002Ax5
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8005000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20000c00
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F002Bx5
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8006000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20000c00
+    cores:
+    - main
+  flash_algorithms:
+  - py32f002bxx_24
+  - py32f002bxx_opt
+  - py32f002bxx_otp
+- name: PY32F002Xx2
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8002000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20000c00
+    cores:
+    - main
+  flash_algorithms:
+  - py32f002bxx_24
+  - py32f002bxx_opt
+  - py32f002bxx_otp
+- name: PY32F002Xx4
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8004000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20000c00
+    cores:
+    - main
+  flash_algorithms:
+  - py32f002bxx_24
+  - py32f002bxx_opt
+  - py32f002bxx_otp
+- name: PY32F002Xx5
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8006000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20000c00
+    cores:
+    - main
+  flash_algorithms:
+  - py32f002bxx_24
+  - py32f002bxx_opt
+  - py32f002bxx_otp
+- name: PY32F003x4
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8004000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20000800
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F003x6
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8008000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F003x7
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x800c000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001800
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F003x8
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8010000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20002000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F030x4
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8004000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20000800
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F030x6
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8008000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F030x7
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x800c000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001800
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F030x8
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8010000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20002000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F031x4
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8004000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20000800
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F031x6
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8008000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F031x7
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x800c000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001800
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F031x8
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8010000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20002000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f0xx_64
+  - py32f0xx_opt
+- name: PY32F040Cx6
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8008000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F040Cx8
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8010000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20002000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F040Cx9
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8018000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20003000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F040CxB
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8020000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F040x6
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8008000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F040x8
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8010000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20002000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F040x9
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8018000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20003000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F040xB
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8020000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F071Cx6
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8008000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F071Cx8
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8010000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20002000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F071Cx9
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8018000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20003000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F071CxB
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8020000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F071x6
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8008000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F071x8
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8010000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20002000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F071x9
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8018000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20003000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F071xB
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8020000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F072Cx6
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8008000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F072Cx8
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8010000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20002000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F072Cx9
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8018000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20003000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F072CxB
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8020000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F072x6
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8008000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20001000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F072x8
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8010000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20002000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F072x9
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8018000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20003000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+- name: PY32F072xB
+  cores:
+  - name: main
+    type: armv6m
+    core_access_options: !Arm
+      ap: 0
+      psel: 0x0
+  memory_map:
+  - !Nvm
+    name: IROM1
+    range:
+      start: 0x8000000
+      end: 0x8020000
+    cores:
+    - main
+    access:
+      write: false
+      boot: true
+  - !Ram
+    name: IRAM1
+    range:
+      start: 0x20000000
+      end: 0x20004000
+    cores:
+    - main
+  flash_algorithms:
+  - py32f040xx_128
+  - py32f040xx_opt
+flash_algorithms:
+- name: py32f0xx_64
+  description: Cortex-M0+ 64kB Flash
+  default: true
+  instructions: 1EhAaAchSQMIQNNJSUQIYNBIQGgHIUkDiEMBIckDQBjMSUhgCEZAaEALQAPLSQlpyQTJDAhDx0lIYAC/xUgAaAEhiQIIQIhC+NHESEAwwGrAssNJCGDBSEAwwGoABAAOCGG+SEAwwGrAAcANSGC7SEAwAGvAsohguEhAMABrQAFADchgtUhAMEBrwAPAC0hhskhAMIBrwAPAC4hhr0hAMMBrgLLIYa1IQDDAawAMCGJwRxC1A0YMRqpIq0mIYKtIiGD/953/ACCnSQhgCEYAaQEhCEOkSQhhCEYAaokUCEAAKAbRokijSQhgBiBIYKJIiGAAIBC9l0hAaAchSQOIQ5VJSUQJaAhDkklIYJJISEQAaAEhSQNAGinQQBob0EAaDdBAGi/Ri0hAaEALQAOLSQlpyQTJDAhDhklIYC/ghUhAaEALQAOFScloyQTJDAhDgElIYCPgf0hAaEALQAN/SYloyQTJDAhDeklIYBfgeUhAaEALQAN5SUloyQTJDAhDdElIYAvgc0hAaEALQANzSQloyQTJDAhDbklIYAC/AL8Av2xIAGgBIYkCCECIQvjRcEcAtQJG//ee/2tIQGkBIckHCENoSUhhACAAvWZIAGkBIQhDZEkIYQhGQGkEIQhDYUlIYQhGQGkBIQkGCENeSUhh/yABIckGCGC/80+PAuBeSFxJCGBYSABpASEJBAhAACj10VRIQGkEIYhDUklIYQhGQGkBIQkGiENPSUhhCEYAacAHwA8AKAfRCEYAaQEhCENJSQhhASBwRwAg/OcBRkVIAGkBIhBDQ0oQYRBGQGnSFBBDQEpQYRBGQGkBIhIGEEM9SlBh/yAIYL/zT48C4D5IPEoQYDhIAGkBIhIEEEAAKPXRNEhAaVIRkEMySlBhEEZAaQEiEgaQQy9KUGEAIHBHA0YBIHBHMLUDRghGfzDBCckBKEgAaQEkIEMmTCBhPOAlSEBpASQgQyNMYGEgRkBpASQkBiBDH0xgYQAgDuCEABRZhQBcUR4oBtEaTGRpASXtBCxDGE1sYUQc4LIgKO7bv/NPjwLgGEgWTCBgEkgAaQEkJAQgQAAo9dEOSEBpQAhAAAxMYGEgRkBpASQkBqBDCUxgYYAzgDKAOQApwNEAIDC9ABACQAQAAAAAD/8fACECQCMBZ0UAIAJAq4nvzVVVAAAAMABA/w8AAKqqAAAAAAAAAAAAAA==
+  pc_init: 0xb3
+  pc_uninit: 0x1b3
+  pc_program_page: 0x2b9
+  pc_erase_sector: 0x24f
+  pc_erase_all: 0x1cd
+  data_section_offset: 0x380
+  flash_properties:
+    address_range:
+      start: 0x8000000
+      end: 0x8010000
+    page_size: 0x80
+    erased_byte_value: 0xff
+    program_page_timeout: 600
+    erase_sector_timeout: 6000
+    sectors:
+    - size: 0x1000
+      address: 0x0
+- name: py32f0xx_opt
+  description: Cortex-M0+ Flash Options
+  instructions: pUhAaAchSQMIQKRJSUQIYKFIQGgHIUkDiEMBIckDQBidSUhgCEZAaEALQAOcSQlpyQTJDAhDmElIYAC/lkgAaAEhiQIIQIhC+NGVSEAwwGrAspRJCGCSSEAwwGoABAAOCGGPSEAwwGrAAcANSGCMSEAwAGvAsohgiUhAMABrQAFADchghkhAMEBrwAPAC0hhg0hAMIBrwAPAC4hhgEhAMMBrgLLIYX5IQDDAawAMCGJwRxC1A0YMRntIfEmIYHxIiGD/953/e0h4SchgekjIYAAgCGAIRgBpASEIQ3NJCGEIRgBqiRQIQAAoBtFzSHRJCGAGIEhgc0iIYAAgEL1mSEBoByFJA4hDZElJRAloCENhSUhgYUhIRABoASFJA0AaKdBAGhvQQBoN0EAaL9FaSEBoQAtAA1pJCWnJBMkMCENVSUhgL+BUSEBoQAtAA1RJyWjJBMkMCENPSUhgI+BOSEBoQAtAA05JiWjJBMkMCENJSUhgF+BISEBoQAtAA0hJSWjJBMkMCENDSUhgC+BCSEBoQAtAA0JJCWjJBMkMCEM9SUhgAL8AvwC/O0gAaAEhiQIIQIhC+NFwRwC1Akb/957/OkhAaQEhyQcIQzdJSGEIRkBpSQQIQzRJSGEAIAC9ACBwRwFGACBwRwNGASBwR/C1BUYORhFoU2jUaCtIAGkBJzhDKU84YYiyOGKYsnhioLL4YjhGQGkBJ38EOEMjT3hhOEZAaQEnPwY4Qx9PeGH/IBxPgD84YL/zT48AvxtIAGkBJz8EOEAAKPjRF0hAaX8AuEMVT3hhOEZAaQEnPwa4QxJPeGEAIPC9cLUDRhRoVWjWaBhooEIB0BhGcL1YaKhCAdAYHfnn2GiwQgLQGEYMMPPnWBjx5wAQAkAEAAAAAA//HwAhAkAjAWdFACACQKuJ7807KhkIf25dTFVVAAAAMABA/w8AAAAAAAAAAAAA
+  pc_init: 0xb3
+  pc_uninit: 0x1bb
+  pc_program_page: 0x1f1
+  pc_erase_sector: 0x1e5
+  pc_erase_all: 0x1e1
+  pc_verify: 0x26b
+  data_section_offset: 0x2c8
+  flash_properties:
+    address_range:
+      start: 0x1fff0e80
+      end: 0x1fff0e90
+    page_size: 0x10
+    erased_byte_value: 0xff
+    program_page_timeout: 3000
+    erase_sector_timeout: 3000
+    sectors:
+    - size: 0x10
+      address: 0x0
+- name: py32f002bxx_24
+  description: Cortex-M0+ 24kB Flash
+  default: true
+  instructions: cEcQtQNGkUiRTKBgkUigYP/39v8AICBgIEYAaQEkIEOLTCBhIEYAaqQUIEAAKAbRiUiKTCBgBiBgYIlIoGAAIBC9cEcAtQFG//f7/4BIQGkBItIHEEN+SlBhACAAvXxIAGkBIQhDekkIYQhGQGkEIQhDd0lIYQhGQGkBIQkGCENzSUhh/yABIckGCGC/80+PAuB0SHFJCGBtSABpASEJBAhAACj10WpIQGkEIYhDaElIYQhGQGkBIQkGiENkSUhhCEYAacAHwA8AKAfRCEYAaQEhCENeSQhhASBwRwAg/OcBRltIAGkBIhBDWUoQYRBGQGnSFBBDVkpQYRBGQGkBIhIGEENSSlBh/yAIYL/zT48C4FRIUUoQYE1IAGkBIhIEEEAAKPXRSkhAaVIRkENISlBhEEZAaQEiEgaQQ0RKUGEAIHBHA0YBIHBHMLUDRghGfzDBCckBPkgAaQEkIEM8TCBhPOA6SEBpASQgQzhMYGEgRkBpASQkBiBDNUxgYQAgDuCEABRZhQBcUR4oBtEwTGRpASXtBCxDLU1sYUQc4LIgKO7bv/NPjwLgLkgrTCBgJ0gAaQEkJAQgQAAo9dEkSEBpQAhAACJMYGEgRkBpASQkBqBDHkxgYYAzgDKAOQApwNEAIDC9AUYZSABpASIQQxdKEGEQRkBpAiIQQxRKUGEQRkBpASISBhBDEUpQYf8gCGC/80+PAuASSBBKEGAMSABpASISBBBAACj10QhIQGkCIpBDBkpQYRBGQGkBIhIGkEMDSlBhACBwRwAAIwFnRQAgAkCrie/NVVUAAAAwAED/DwAAqqoAAAAAAAAAAAAA
+  pc_init: 0x3
+  pc_uninit: 0x45
+  pc_program_page: 0x14b
+  pc_erase_sector: 0xe1
+  pc_erase_all: 0x5f
+  data_section_offset: 0x268
+  flash_properties:
+    address_range:
+      start: 0x8000000
+      end: 0x8006000
+    page_size: 0x80
+    erased_byte_value: 0xff
+    program_page_timeout: 600
+    erase_sector_timeout: 6000
+    sectors:
+    - size: 0x1000
+      address: 0x0
+- name: py32f002bxx_opt
+  description: Cortex-M0+ Flash Options
+  instructions: cEcQtQNGY0hjTKBgY0igYP/39v9iSOBgYkjgYAAgIGAgRgBpASQgQ1tMIGEgRgBqpBQgQAAoBtFbSFxMIGAGIGBgW0igYAAgEL1wRwC1AUb/9/v/UEhAaQEi0gcQQ05KUGEQRkBpUgQQQ0tKUGEAIAC9ACBwRwFGACBwRwNGASBwR/C1DkYRaFNolGjVaEJIAGkBJzhDQE84YYiyOGKYsnhioLK4Yqiy+GI4RkBpASd/BDhDOE94YThGQGkBJz8GOEM1T3hh/yAzT4A3OGC/80+PAL8wSABpASc/BDhAACj40S1IQGl/ALhDK094YThGQGkBJz8GuEMnT3hhACDwvXC1A0YUaFVo1mgYaKBCAdAYRnC9WGioQgHQGB3559hosEIC0BhGDDDz51gY8ecBRhlIAGkBIhBDF0oQYRBGQGkCIhBDFEpQYRBGQGkBIhIGEEMRSlBh/yAIYL/zT48C4BRIEkoQYAxIAGkBIhIEEEAAKPXRCEhAaQIikEMGSlBhEEZAaQEiEgaQQwNKUGEAIHBHAAAjAWdFACACQKuJ7807KhkIf25dTFVVAAAAMABA/w8AAKqqAAAAAAAAAAAAAA==
+  pc_init: 0x3
+  pc_uninit: 0x4d
+  pc_program_page: 0x83
+  pc_erase_sector: 0x77
+  pc_erase_all: 0x73
+  pc_verify: 0x101
+  data_section_offset: 0x1b8
+  flash_properties:
+    address_range:
+      start: 0x1fff0080
+      end: 0x1fff0090
+    page_size: 0x10
+    erased_byte_value: 0xff
+    program_page_timeout: 3000
+    erase_sector_timeout: 3000
+    sectors:
+    - size: 0x10
+      address: 0x0
+- name: py32f002bxx_otp
+  description: Cortex-M0+ OTP
+  instructions: cEcQtQNGXkheTKBgXkigYP/39v8AICBgIEYAaQEkIENYTCBhIEYAaqQUIEAAKAbRVkhXTCBgBiBgYFZIoGAAIBC9cEcAtQFG//f7/01IQGkBItIHEENLSlBhACAAvQFGSEgAaQEiEENGShBhEEZAaQIiEENDSlBhEEZAaQEiEgYQQ0BKUGH/IAhgv/NPjwLgQUg/ShBgO0gAaQEiEgQQQAAo9dE3SEBpAiKQQzVKUGEQRkBpASISBpBDMkpQYQAgcEcAtTVI//fK/wAgAL0AtQNGMkj/98P/ACAAvQNGASBwRzC1A0YIRn8wwQnJASVIAGkBJCBDI0wgYTzgIUhAaQEkIEMfTGBhIEZAaQEkJAYgQxxMYGEAIA7ghAAUWYUAXFEeKAbRF0xkaQEl7QQsQxRNbGFEHOCyICju27/zT48C4BVIEkwgYA5IAGkBJCQEIEAAKPXRC0hAaUAIQAAJTGBhIEZAaQEkJAagQwVMYGGAM4AygDkAKcDRACAwvQAAIwFnRQAgAkCrie/NVVUAAAAwAED/DwAAqqoAAIAC/x8AAAAAAAAAAA==
+  pc_init: 0x3
+  pc_uninit: 0x45
+  pc_program_page: 0xe3
+  pc_erase_sector: 0xcf
+  pc_erase_all: 0xc3
+  data_section_offset: 0x1a0
+  flash_properties:
+    address_range:
+      start: 0x1fff0280
+      end: 0x1fff0300
+    page_size: 0x80
+    erased_byte_value: 0xff
+    program_page_timeout: 600
+    erase_sector_timeout: 6000
+    sectors:
+    - size: 0x80
+      address: 0x0
+- name: py32f040xx_128
+  description: Cortex-M0+ 128kB Flash
+  default: true
+  instructions: QLpwR8C6cEcoIUFD6EqJGIlrybLnShFgKCFBQ+RKiRiJawkECQ7jShFhKCFBQ+BKiRiJa8kByQ3eSlFgKCFBQ9tKiRgJbMmy2kqRYCghQUPXSokYCWxJAUkN1krRYCghQUPTSokYiWzJA8kL0UpRYSghQUPOSokYCW3JA8kLzUqRYSghQUPKSokYiW2JsslK0WEoIUFDxkqJGIltCQzFShFicEcAtcRIQGgHIUkDCEDCSUlECGDASEBoAAwABLxJCWoIQ7xJSGAAv7tIAGgBIYkCCECIQvjRBCD/95X/AL21SEBoByFJA4hDtElJRAloCEOxSUhgsUhIRABoASFJA0AaI9BAGhfQQBoL0EAaJ9GpSEBoAAwABKVJCWoIQ6ZJSGAn4KRIQGgADAAEoEmJaQhDoUlIYB3gn0hAaAAMAASbSQlpCEOcSUhgE+CaSEBoAAwABJZJiWgIQ5dJSGAJ4JVIQGgADAAEkUkJaAhDkklIYAC/AL8Av49IAGgBIYkCCECIQvjRcEcwtQNGDEYVRotIjEmIYIxIiGD/94P/iUgAaQEhCEOHSQhhCEYAaskUCECIQgbQhUiFSQhgBiBIYIRIiGB/SABqASEJAwhAiEIG0IFIQGj/IYExCEN+SUhgACAwvQC1Akb/93r/dUhAaQEhyQcIQ3NJSGEAIAC9cUgAaQEhCENvSQhhCEZAaQQhCENsSUhhCEZAaQEhCQYIQ2hJSGH/IAEhyQYIYL/zT48I4GlIAGh/IQhDZ0kIYGdIY0kIYF9IAGkBIQkECEAAKO/RXEhAaQQhiENaSUhhCEZAaQEhCQaIQ1ZJSGEIRgBpwAfADwAoB9EIRgBpASEIQ1BJCGEBIHBHACD85wFGTUgAaQEiEENLShBhEEZAadIUEENISlBhEEZAaQEiEgYQQ0RKUGH/IAhgv/NPjwjgRkgAaH8iEENEShBgREhAShBgPEgAaQEiEgQQQAAo79E5SEBpUhGQQzdKUGEQRkBpASISBpBDM0pQYQAgcEcDRgEgcEcwtQNGyB34MAEKCQItSABpASQgQytMIGFF4ClIQGkBJCBDJ0xgYSBGQGkBJCQGIEMkTGBhACAO4IQAFFmFAFxRPigG0R9MZGkBJe0ELEMcTWxhRBzgskAo7tO/80+PCOAdSABofyQgQxtMIGAbSBdMIGATSABpASQkBCBAACjv0RBIQGlACEAADkxgYSBGQGkBJCQGoEMKTGBh/zMBM/8yATL/OQE5ACm30QAgML0AMv8fACECQAAQAkAEAAAAIwFnRQAgAkCrie/NVVUAAAAwAED/DwAAACwAQKqqAAAAAAAAAAAAAA==
+  pc_init: 0x189
+  pc_uninit: 0x1e5
+  pc_program_page: 0x303
+  pc_erase_sector: 0x28d
+  pc_erase_all: 0x1ff
+  data_section_offset: 0x3e0
+  flash_properties:
+    address_range:
+      start: 0x8000000
+      end: 0x8020000
+    page_size: 0x100
+    erased_byte_value: 0xff
+    program_page_timeout: 600
+    erase_sector_timeout: 6000
+    sectors:
+    - size: 0x2000
+      address: 0x0
+- name: py32f040xx_opt
+  description: Cortex-M0+ Flash Options
+  instructions: QLpwR8C6cEcoIUFDsEqJGIlrybKvShFgKCFBQ6xKiRiJawkECQ6rShFhKCFBQ6hKiRiJa8kByQ2mSlFgKCFBQ6NKiRgJbMmyokqRYCghQUOfSokYCWxJAUkNnkrRYCghQUObSokYiWzJA8kLmUpRYSghQUOWSokYCW3JA8kLlUqRYSghQUOSSokYiW2JspFK0WEoIUFDjkqJGIltCQyNShFicEcAtYxIQGgHIUkDCECKSUlECGCISEBoAAwABIRJCWoIQ4RJSGAAv4NIAGgBIYkCCECIQvjRBCD/95X/AL19SEBoByFJA4hDfElJRAloCEN5SUhgeUhIRABoASFJA0AaI9BAGhfQQBoL0EAaJ9FxSEBoAAwABG1JCWoIQ25JSGAn4GxIQGgADAAEaEmJaQhDaUlIYB3gZ0hAaAAMAARjSQlpCENkSUhgE+BiSEBoAAwABF5JiWgIQ19JSGAJ4F1IQGgADAAEWUkJaAhDWklIYAC/AL8Av1dIAGgBIYkCCECIQvjRcEcwtQNGDEYVRlNIVEmIYFRIiGBUSMhgVEjIYP/3f/9PSABpASEIQ01JCGEIRgBqyRQIQIhCBtBNSE1JCGAGIEhgTEiIYEVIAGoBIQkDCECIQgbQSUhAaP8hgTEIQ0ZJSGAAIDC9ALUCRv/3dv87SEBpASHJBwhDOUlIYQhGQGlJBAhDNklIYQAgAL0AIHBHAUYAIHBHA0YBIHBH8LUFRg5GEWiTaJRpLUgAaQEnOEMrTzhhiLI4YjFIGEB4YqCy+GI4RkBpASd/BDhDJE94YThGQGkBJz8GOEMgT3hh/yAbT4A/OGC/80+PAL8cSABpASc/BDhAACj40RhIQGl/ALhDFk94YThGQGkBJz8GuEMTT3hhACDwvXC1A0YUaJVolmkYaKBCAdAYRnC9mGioQgLQGEYIMPjnmGmwQgLQGEYYMPLnWBjw5wAAADL/HwAhAkAAEAJABAAAACMBZ0UAIAJAq4nvzTsqGQh/bl1MVVUAAAAwAED/DwAAACwAQB8fAAAAAAAAAAAAAA==
+  pc_init: 0x189
+  pc_uninit: 0x1ed
+  pc_program_page: 0x223
+  pc_erase_sector: 0x217
+  pc_erase_all: 0x213
+  pc_verify: 0x29f
+  data_section_offset: 0x308
+  flash_properties:
+    address_range:
+      start: 0x1fff3100
+      end: 0x1fff3120
+    page_size: 0x20
+    erased_byte_value: 0xff
+    program_page_timeout: 3000
+    erase_sector_timeout: 3000
+    sectors:
+    - size: 0x20
+      address: 0x0

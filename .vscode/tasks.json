@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "options": {
+        "cwd": "${workspaceFolder}"
+    },
+    "tasks": [
+        {
+            "label": "config",
+            "type": "shell",
+            "command": "cmake -G Ninja -B ./build",
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "cmake --build ./build",
+        },
+        {
+            "label": "download",
+            "type": "shell",
+            "command": "probe-rs download --chip PY32F002Bx5 --speed 500 build/bin/py32f002.elf | probe-rs reset --chip PY32F002Bx5",
+        },
+    ]
+}

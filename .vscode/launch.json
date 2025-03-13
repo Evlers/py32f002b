@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "probe-rs-debug",
+            "request": "attach",
+            "name": "probe-rs-daplink-debug-attach",
+            "cwd": "${workspaceRoot}",
+            "connectUnderReset": false,
+            "chip": "PY32F002Bx5",
+            "speed": 500,
+            "wireProtocol": "Swd",
+            "coreConfigs": [
+                {
+                    "coreIndex": 0,
+                    "programBinary": "./build/bin/py32f002b.elf",
+                }
+            ]
+        },
+        // {
+        //     "cwd": "${workspaceFolder}",
+        //     "type": "cortex-debug",
+        //     "name": "cortex-debug-daplink-attach",
+        //     "request": "attach",
+        //     "servertype": "openocd",
+        //     "executable": "build/bin/py32f002b.elf",
+        //     "device": "PY32F002B",
+        //     "svdFile": "board/misc/py32f002bxx.svd",
+        //     "interface": "swd",
+        //     "configFiles": [
+        //         "interface/cmsis-dap.cfg",
+        //         "board/misc/board.cfg",
+        //     ],
+        // }
+    ]
+}
