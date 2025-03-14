@@ -123,7 +123,7 @@ void SystemInit(void)
 #endif /* VECT_TAB_SRAM */
 
 #ifndef SWD_DELAY
-  /* When the SWD pin is reused for other functions, this function is used to solve the 
+  /* When the SWD pin is reused for other functions, this function is used to solve the
   problem of not being able to update the code. */
   DelayTime(100);
 #endif /* SWD_DELAY */

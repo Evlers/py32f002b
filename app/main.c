@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2025-2030 Evlers Developers
+ * Copyright (c) 2025-2025 Evlers Developers
  *
  * Change Logs:
  * Date           Author       Notes
@@ -48,7 +48,7 @@ int main (void)
             if (index >= (sizeof(leds) / sizeof(leds[0])))
                 index = 0;
         }
-        
+
         if (BOARD_BTN1_GET())
         {
             kprintf("Button 1 pressed\r");

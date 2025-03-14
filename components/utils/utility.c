@@ -1,6 +1,6 @@
 
 /*
- * Copyright (c) 2006-2024 LGT Development Team
+ * Copyright (c) 2006-2025 LGT Development Team
  *
  * Change Logs:
  * Date           Author       Notes

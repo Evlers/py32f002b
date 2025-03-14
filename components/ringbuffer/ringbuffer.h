@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2006-2018, RT-Thread Development Team
+ * Copyright (c) 2006-2025 RT-Thread Development Team
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -17,9 +17,9 @@ extern "C" {
 #include <stdint.h>
 #include <assert.h>
 
-#define ALIGN_DOWN(size, align)		((size) & ~((align) - 1))
-#define ALIGN_SIZE					4
-	
+#define ALIGN_DOWN(size, align)     ((size) & ~((align) - 1))
+#define ALIGN_SIZE                  4
+
 /* ring buffer */
 struct ringbuffer
 {

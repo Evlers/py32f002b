@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2006-2018, RT-Thread Development Team
+ * Copyright (c) 2006-2025 RT-Thread Development Team
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -8,7 +8,7 @@
  * 2012-09-30     Bernard      first version.
  * 2013-05-08     Grissiom     reimplement
  * 2016-08-18     heyuanjie    add interface
- * 2022-09-20	  Evlers	   add freertos support
+ * 2022-09-20     Evlers       add freertos support
  */
 
 #include <string.h>
@@ -318,8 +318,8 @@ size_t ringbuffer_getchar(struct ringbuffer *rb, uint8_t *ch)
     return 1;
 }
 
-/** 
- * get the size of data in rb 
+/**
+ * get the size of data in rb
  */
 size_t ringbuffer_data_len(struct ringbuffer *rb)
 {
@@ -338,8 +338,8 @@ size_t ringbuffer_data_len(struct ringbuffer *rb)
     };
 }
 
-/** 
- * empty the rb 
+/**
+ * empty the rb
  */
 void ringbuffer_reset(struct ringbuffer *rb)
 {
@@ -358,7 +358,7 @@ struct ringbuffer* ringbuffer_create(uint16_t size)
     struct ringbuffer *rb;
     uint8_t *pool;
 
-	assert(size > 0);
+    assert(size > 0);
 
     size = ALIGN_DOWN(size, ALIGN_SIZE);
 
