@@ -17,7 +17,7 @@
         {
             "label": "download",
             "type": "shell",
-            "command": "probe-rs download --chip PY32F002Bx5 --speed 500 build/bin/py32f002.elf | probe-rs reset --chip PY32F002Bx5",
+            "command": "probe-rs download --chip PY32F002Bx5 --speed 500 build/bin/py32f002b.elf | probe-rs reset --chip PY32F002Bx5",
         },
     ]
 }

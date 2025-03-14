@@ -7,7 +7,6 @@
  */
 
 #include "board.h"
-#include "interrupt.h"
 
 /**
   * @brief This function handles Non maskable interrupt.
