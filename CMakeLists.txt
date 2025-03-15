@@ -42,7 +42,7 @@ include_directories(
 # set compile and linker flags
 set (MCPU "-mcpu=cortex-m0plus -mthumb")
 set (MFLOAT_ABI "-mfloat-abi=soft")
-set (CMAKE_C_FLAGS "${MCPU} ${MFLOAT_ABI} -std=gnu11 --specs=nano.specs")
+set (CMAKE_C_FLAGS "${MCPU} ${MFLOAT_ABI} -std=gnu11 --specs=nano.specs -ffunction-sections -fdata-sections")
 set (CMAKE_ASM_FLAGS "${CMAKE_C_FLAGS} -x assembler-with-cpp")
 set (CMAKE_EXE_LINKER_FLAGS "--specs=nosys.specs -Wl,--gc-sections,--print-memory-usage,-Map=${CMAKE_PROJECT_NAME}.map")
 
