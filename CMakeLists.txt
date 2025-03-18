@@ -51,10 +51,11 @@ add_executable (${CMAKE_PROJECT_NAME}.elf ${ALL_SOURCE_FILES})
 target_compile_options (${CMAKE_PROJECT_NAME}.elf PRIVATE -DNDEBUG -Os -g -DUSE_HAL_DRIVER -DPY32F002Bx5)
 target_link_options (${CMAKE_PROJECT_NAME}.elf PRIVATE -T../board/linker_scripts/py32f002bx5.ld)
 
-# set output path
+# set output file and tools path
 set (EXECUTABLE_OUTPUT_PATH ./bin)
 set (LIBRARY_OUTPUT_PATH ./lib)
 set (OUTPUT_FILE_PATH_NAME ${EXECUTABLE_OUTPUT_PATH}/${CMAKE_PROJECT_NAME})
+set (PROBE-RS_TOOLS ../tools/probe-rs/probe-rs.exe)
 
 # generate the binary file
 add_custom_target (${CMAKE_PROJECT_NAME}.bin ALL ${CMAKE_OBJCOPY}
@@ -73,8 +74,8 @@ add_custom_target (size ALL ${CMAKE_SIZE} ${OUTPUT_FILE_PATH_NAME}.elf
 
 # flashing the firmware to target
 add_custom_target(flash COMMAND ${CMAKE_COMMAND} -E echo "\n"
-                        COMMAND probe-rs download --chip PY32F002Bx5 --speed 500 ${OUTPUT_FILE_PATH_NAME}.elf
-                        COMMAND probe-rs reset --chip PY32F002Bx5
+                        COMMAND ${PROBE-RS_TOOLS} download --chip PY32F002Bx5 --speed 500 ${OUTPUT_FILE_PATH_NAME}.elf
+                        COMMAND ${PROBE-RS_TOOLS} reset --chip PY32F002Bx5
                         DEPENDS ${OUTPUT_FILE_PATH_NAME}.elf
                         COMMENT "flashing firmware to target..."
                         USES_TERMINAL VERBATIM)

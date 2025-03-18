@@ -13,5 +13,19 @@ PY32F002B系列微控制器采用高性能的 32 位ARM® Cortex®-M0+内核，�
 - 2 个用户按键和 1 个复位按键
 - Typec 接口供电
 
+## 配置VSCode
+- 按下 `Ctrl + Shift + P` 搜索 `Open KeyBoard Shortcuts`, 添加以下快捷键配置：
+```
+    { "key": "f6",          "command": "workbench.action.tasks.runTask", "args": "config"},
+    { "key": "f7",          "command": "workbench.action.tasks.runTask", "args": "build"},
+    { "key": "f8",          "command": "workbench.action.tasks.runTask", "args": "download"},
+```
+
+## 使用
+- `F5` 进入硬件仿真调试
+- `F6` 配置Cmake环境
+- `F7` 构建Cmake项目
+- `F8` 下载固件到目标板
+
 ## 产品图片
 <img src="docs/figures/board1.jpg" alt="image-20201009181905422" style="zoom:50%;" />
