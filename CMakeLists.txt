@@ -66,6 +66,15 @@ add_custom_target (${CMAKE_PROJECT_NAME}.hex ALL ${CMAKE_OBJCOPY}
                     -Oihex ${OUTPUT_FILE_PATH_NAME}.elf ${OUTPUT_FILE_PATH_NAME}.hex
                     DEPENDS ${OUTPUT_FILE_PATH_NAME}.elf)
 
-# echo the size Infomation
+# echo the size infomation
 add_custom_target (size ALL ${CMAKE_SIZE} ${OUTPUT_FILE_PATH_NAME}.elf
-                    DEPENDS ${OUTPUT_FILE_PATH_NAME}.elf)
+                    DEPENDS ${OUTPUT_FILE_PATH_NAME}.elf
+                    COMMENT "size of ${CMAKE_PROJECT_NAME}.elf" VERBATIM)
+
+# flashing the firmware to target
+add_custom_target(flash COMMAND ${CMAKE_COMMAND} -E echo "\n"
+                        COMMAND probe-rs download --chip PY32F002Bx5 --speed 500 ${OUTPUT_FILE_PATH_NAME}.elf
+                        COMMAND probe-rs reset --chip PY32F002Bx5
+                        DEPENDS ${OUTPUT_FILE_PATH_NAME}.elf
+                        COMMENT "flashing firmware to target..."
+                        USES_TERMINAL VERBATIM)
