@@ -20,6 +20,6 @@
 #define u_packed                   __attribute__((packed))
 
 /* extend */
-#define u_unused(x)                 ((void)x)
+#define u_unused(x)                ((void)x)
 
 #endif  /* __COMPILER_H__ */

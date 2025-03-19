@@ -1,0 +1,40 @@
+
+# irc
+if (CONFIG_COMPONENTS_ENABLE_IRC)
+    list(APPEND COMPONENT_SOURCES ./irc/irc.c)
+endif()
+
+# log
+if (CONFIG_COMPONENTS_ENABLE_LOG)
+    list(APPEND COMPONENT_SOURCES ./log/log.c)
+endif()
+
+# ringbuffer
+if (CONFIG_COMPONENTS_ENABLE_RINGBUFFER)
+    list(APPEND COMPONENT_SOURCES ./ringbuffer/ringbuffer.c)
+endif()
+
+# utils
+if (CONFIG_COMPONENTS_ENABLE_UTILS)
+    if (CONFIG_COMPONENTS_ENABLE_UTILS_KSERVICE)
+        list(APPEND COMPONENT_SOURCES ./utils/kstdio.c)
+        list(APPEND COMPONENT_SOURCES ./utils/kservice.c)
+    endif()
+    if (COMPONENTS_ENABLE_UTILS_PROGRESS_BAR)
+        list(APPEND COMPONENT_SOURCES ./utils/progress_bar.c)
+    endif()
+    list(APPEND COMPONENT_SOURCES ./utils/utils.c)
+endif()
+
+# add static or interface library and set include path
+if (COMPONENT_SOURCES)
+    add_library(components STATIC ${COMPONENT_SOURCES})
+    target_include_directories(components PUBLIC
+        ./irc
+        ./log
+        ./utils
+        ./ringbuffer
+    )
+else()
+    add_library(components INTERFACE)
+endif()

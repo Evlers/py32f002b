@@ -44,9 +44,10 @@ typedef struct
     volatile uint8_t repeat;            /* repeat code trigger count */
 } irc_rx_t;
 
-bool irx_rx_is_ready (void);
-uint8_t irx_rx_get_address (void);
-uint8_t irx_rx_get_command (void);
+bool irc_rx_is_ready (void);
+uint8_t irc_rx_get_repeat (void);
+uint8_t irc_rx_get_address (void);
+uint8_t irc_rx_get_command (void);
 void irc_rx_decoder_reset (void);
 uint32_t irc_rx_isr_callback (bool edge, uint32_t elapsed_us);
 

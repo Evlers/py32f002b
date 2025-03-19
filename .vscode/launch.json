@@ -13,7 +13,7 @@
             "coreConfigs": [
                 {
                     "coreIndex": 0,
-                    "programBinary": "./build/bin/py32f002b.elf",
+                    "programBinary": "build/py32f002b.elf",
                 }
             ]
         },
@@ -23,7 +23,7 @@
         //     "name": "cortex-debug-daplink-attach",
         //     "request": "attach",
         //     "servertype": "openocd",
-        //     "executable": "build/bin/py32f002b.elf",
+        //     "executable": "build/py32f002b.elf",
         //     "device": "PY32F002B",
         //     "svdFile": "board/misc/py32f002bxx.svd",
         //     "interface": "swd",

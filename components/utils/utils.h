@@ -6,8 +6,8 @@
  * 2024-07-04     Evlers       first implementation
  */
 
-#ifndef _UTILITY_H_
-#define _UTILITY_H_
+#ifndef _UTILS_H_
+#define _UTILS_H_
 
 #define BV(x)               (1<<(x))
 #define MIN(a, b)           (((a) < (b)) ? (a) : (b))
@@ -53,4 +53,4 @@ uint32_t crc32 (uint8_t *ptr, uint32_t len);
 void crc32_init_ctx (struct crc32_ctx_t *ctx);
 uint32_t crc32_calculate (struct crc32_ctx_t *ctx, uint8_t *ptr, uint32_t len);
 
-#endif /* _UTILITY_H_ */
+#endif /* _UTILS_H_ */

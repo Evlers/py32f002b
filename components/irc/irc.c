@@ -20,19 +20,24 @@
 
 static volatile irc_rx_t irc_rx = { 0 };
 
-bool irx_rx_is_ready (void)
+bool irc_rx_is_ready (void)
 {
     bool ready = irc_rx.ready;
     irc_rx.ready = false;
     return ready;
 }
 
-uint8_t irx_rx_get_address (void)
+uint8_t irc_rx_get_repeat (void)
+{
+    return irc_rx.repeat;
+}
+
+uint8_t irc_rx_get_address (void)
 {
     return irc_rx.address;
 }
 
-uint8_t irx_rx_get_command (void)
+uint8_t irc_rx_get_command (void)
 {
     return irc_rx.command;
 }

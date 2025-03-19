@@ -9,9 +9,7 @@
 
 #include <stdint.h>
 #include <string.h>
-
-#include "board.h"
-#include "utility.h"
+#include "utils.h"
 
 void mem_reverse (uint8_t* buffer, int length)
 {

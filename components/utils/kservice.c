@@ -14,12 +14,7 @@
 
 #include "compiler.h"
 #include "kstdio.h"
-
-/* configuration */
-// #define USE_STDLIB_VSPRINTF
-#ifndef KPRINTF_BUF_SIZE
-#define KPRINTF_BUF_SIZE    256
-#endif
+#include "sdkconfig.h"
 
 /**
  * @brief This function will put string to the console.
@@ -35,11 +30,11 @@ u_weak int kprintf(const char *fmt, ...)
 {
     va_list args;
     size_t length = 0;
-    static char log_buf[KPRINTF_BUF_SIZE];
+    static char log_buf[CONFIG_COMPONENTS_KPRINTF_BUF_SIZE];
 
     va_start(args, fmt);
 
-#ifndef USE_STDLIB_VSPRINTF
+#ifndef CONFIG_COMPONENTS_KSERVICE_USE_STDLIB_VSPRINTF
     /* the return value of vsnprintf is the number of bytes that would be
      * written to buffer had if the size of the buffer been sufficiently
      * large excluding the terminating null byte. If the output string
@@ -48,10 +43,10 @@ u_weak int kprintf(const char *fmt, ...)
     length = k_vsnprintf(log_buf, sizeof(log_buf) - 1, fmt, args);
 #else
     length = vsnprintf(log_buf, sizeof(log_buf) - 1, fmt, args);
-#endif /* USE_STDLIB_VSPRINTF */
-    if (length > KPRINTF_BUF_SIZE - 1)
+#endif /* CONFIG_COMPONENTS_KSERVICE_USE_STDLIB_VSPRINTF */
+    if (length > CONFIG_COMPONENTS_KPRINTF_BUF_SIZE - 1)
     {
-        length = KPRINTF_BUF_SIZE - 1;
+        length = CONFIG_COMPONENTS_KPRINTF_BUF_SIZE - 1;
     }
 
     _kputs(log_buf, length);

@@ -1,0 +1,41 @@
+menu "Components Configuration"
+
+    config COMPONENTS_ENABLE_IRC
+        bool "Enable Infrared Remote Control"
+        default n
+    
+    config COMPONENTS_ENABLE_LOG
+        bool "Enable Logging"
+        default n
+    
+    config CONFIG_COMPONENTS_ENABLE_RINGBUFFER
+        bool "Enable Ring Buffer"
+        default n
+
+    menuconfig COMPONENTS_ENABLE_UTILS
+        bool "Enable Utilities"
+        default n
+
+        if COMPONENTS_ENABLE_UTILS
+            menuconfig COMPONENTS_ENABLE_UTILS_KSERVICE
+                bool "Enable Kernel Service"
+                default n
+
+            if COMPONENTS_ENABLE_UTILS_KSERVICE
+                config COMPONENTS_KPRINTF_USING_LONGLONG
+                    bool "Enable kprintf using long long type"
+                    default n
+                config COMPONENTS_KSERVICE_USE_STDLIB_VSPRINTF
+                    bool "Using stdlib vsprintf"
+                    default n
+                config COMPONENTS_KPRINTF_BUF_SIZE
+                    int "kprintf buffer size"
+                    default 256
+            endif # COMPONENTS_ENABLE_UTILS_KSERVICE
+
+            config COMPONENTS_ENABLE_UTILS_PROGRESS_BAR
+                bool "Enable Progress Bar"
+                default n
+        endif # COMPONENTS_ENABLE_UTILS
+
+endmenu

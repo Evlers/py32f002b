@@ -19,5 +19,10 @@
             "type": "shell",
             "command": "cmake --build ./build --target flash",
         },
+        {
+            "label": "menuconfig",
+            "type": "shell",
+            "command": "cmake --build ./build --target menuconfig",
+        },
     ]
 }

@@ -1,0 +1,3 @@
+mainmenu "Main Menu"
+
+    rsource "components/Kconfig"

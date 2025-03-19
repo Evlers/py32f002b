@@ -11,8 +11,7 @@
 #include <stdarg.h>
 
 #include "compiler.h"
-
-#define KPRINTF_USING_LONGLONGx
+#include "sdkconfig.h"
 
 /* private function */
 #define _ISDIGIT(c)  ((unsigned)((c) - '0') < 10)
@@ -26,16 +25,16 @@
  *
  * @return the duplicated string pointer.
  */
-#ifdef KPRINTF_USING_LONGLONG
+#ifdef CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG
 u_inline int divide(unsigned long long *n, int base)
 #else
 u_inline int divide(unsigned long *n, int base)
-#endif /* KPRINTF_USING_LONGLONG */
+#endif /* CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG */
 {
     int res;
 
     /* optimized for processor which does not support divide instructions. */
-#ifdef KPRINTF_USING_LONGLONG
+#ifdef CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG
     res = (int)((*n) % base);
     *n = (long long)((*n) / base);
 #else
@@ -65,11 +64,11 @@ u_inline int skip_atoi(const char **s)
 
 static char *print_number(char *buf,
                           char *end,
-#ifdef KPRINTF_USING_LONGLONG
+#ifdef CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG
                           unsigned long long  num,
 #else
                           unsigned long  num,
-#endif /* KPRINTF_USING_LONGLONG */
+#endif /* CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG */
                           int   base,
                           int   qualifier,
                           int   s,
@@ -77,11 +76,11 @@ static char *print_number(char *buf,
                           int   type)
 {
     char c = 0, sign = 0;
-#ifdef KPRINTF_USING_LONGLONG
+#ifdef CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG
     char tmp[64] = {0};
 #else
     char tmp[32] = {0};
-#endif /* KPRINTF_USING_LONGLONG */
+#endif /* CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG */
     int precision_bak = precision;
     const char *digits = NULL;
     static const char small_digits[] = "0123456789abcdef";
@@ -296,11 +295,11 @@ static char *print_number(char *buf,
  */
 u_weak int k_vsnprintf(char *buf, size_t size, const char *fmt, va_list args)
 {
-#ifdef KPRINTF_USING_LONGLONG
+#ifdef CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG
     unsigned long long num = 0;
 #else
     unsigned long num = 0;
-#endif /* KPRINTF_USING_LONGLONG */
+#endif /* CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG */
     int i = 0, len = 0;
     char *str = NULL, *end = NULL, c = 0;
     const char *s = NULL;
@@ -391,20 +390,20 @@ u_weak int k_vsnprintf(char *buf, size_t size, const char *fmt, va_list args)
         qualifier = 0; /* get the conversion qualifier */
 
         if (*fmt == 'h' || *fmt == 'l' ||
-#ifdef KPRINTF_USING_LONGLONG
+#ifdef CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG
             *fmt == 'L' ||
-#endif /* KPRINTF_USING_LONGLONG */
+#endif /* CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG */
             *fmt == 'z')
         {
             qualifier = *fmt;
             ++fmt;
-#ifdef KPRINTF_USING_LONGLONG
+#ifdef CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG
             if (qualifier == 'l' && *fmt == 'l')
             {
                 qualifier = 'L';
                 ++fmt;
             }
-#endif /* KPRINTF_USING_LONGLONG */
+#endif /* CONFIG_COMPONENTS_KPRINTF_USING_LONGLONG */
             if (qualifier == 'h' && *fmt == 'h')
             {
                 qualifier = 'H';
