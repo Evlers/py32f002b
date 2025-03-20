@@ -16,8 +16,8 @@ enable_language(ASM)
 enable_language(C)
 
 # add kconfig function and generate default config header file
-configure_kconfig(Kconfig sdkconfig sdkconfig.h ${CMAKE_BINARY_DIR}/kconfig_list sdkconfig)
-include_directories(${CMAKE_BINARY_DIR})
+configure_kconfig(Kconfig sdkconfig ${CMAKE_SOURCE_DIR}/sdkconfig.h ${CMAKE_BINARY_DIR}/kconfig_list sdkconfig)
+include_directories(${CMAKE_SOURCE_DIR})
 
 # add probe-rs flash target
 add_flashing_target(
