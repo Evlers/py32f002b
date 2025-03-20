@@ -16,11 +16,25 @@ enable_language(ASM)
 enable_language(C)
 
 # add kconfig function and generate default config header file
-configure_kconfig(Kconfig sdkconfig ${CMAKE_BINARY_DIR}/sdkconfig.h ${CMAKE_BINARY_DIR}/kconfig_list sdkconfig)
+configure_kconfig(Kconfig sdkconfig sdkconfig.h ${CMAKE_BINARY_DIR}/kconfig_list sdkconfig)
 include_directories(${CMAKE_BINARY_DIR})
 
-# add flash target
-add_flashing_target(PY32F002Bx5 1000 ${CMAKE_PROJECT_NAME}.elf)
+# add probe-rs flash target
+add_flashing_target(
+    TOOL probe-rs
+    TARGET PY32F002Bx5
+    SPEED 1000
+    ELF_FILE ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.elf
+)
+
+# add pyocd flash target
+# add_flashing_target(
+#     TOOL pyocd
+#     TARGET PY32F002Bx5
+#     SPEED 1000
+#     ELF_FILE ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.elf
+#     PACK board/misc/Puya.PY32F0xx_DFP.1.2.0.pack
+# )
 
 # add source files
 file(GLOB_RECURSE ALL_SOURCE_FILES
