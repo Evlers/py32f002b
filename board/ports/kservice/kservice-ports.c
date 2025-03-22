@@ -8,6 +8,7 @@
 
 #include <stdint.h>
 #include "board.h"
+#include "sdkconfig.h"
 
 static USART_HandleTypeDef uart_handle;
 
@@ -18,7 +19,18 @@ static USART_HandleTypeDef uart_handle;
  */
 void _kputs(const char *str, long len)
 {
+#ifdef CONFIG_COMPONENTS_ENABLE_LOG
+    for (long i = 0; i < len; i++)
+    {
+        if (str[i] == '\n')
+        {
+            HAL_USART_Transmit(&uart_handle, (uint8_t *)"\r", 1, 10);
+        }
+        HAL_USART_Transmit(&uart_handle, (uint8_t *)&str[i], 1, 10);
+    }
+#else
     HAL_USART_Transmit(&uart_handle, (uint8_t *)str, len, 10);
+#endif
 }
 
 void ports_kservice_init(void)
